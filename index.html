@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bongiwe Mkhasibe | Social Auxiliary Worker</title>
+  <meta name="description" content="Professional portfolio of Bongiwe Mkhasibe — Social Auxiliary Worker with 22 years of experience in elder care, trauma counselling, and community support. KwaZulu-Natal, South Africa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream:     #F7F2EA;
+      --linen:     #EDE5D8;
+      --sage:      #3A6B4F;
+      --sage-deep: #254D38;
+      --sage-pale: #D4E4DA;
+      --clay:      #B55A38;
+      --clay-pale: #F0DDD5;
+      --text:      #2A2218;
+      --text-mid:  #5C5044;
+      --text-soft: #8A7D72;
+      --white:     #FFFFFF;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NOISE TEXTURE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.4;
+    }
+
+    /* ── NAVIGATION ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(247, 242, 234, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(58, 107, 79, 0.12);
+      transition: padding 0.3s ease;
+    }
+
+    .nav-logo {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--sage-deep);
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-mid);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--sage); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 120px 60px 80px;
+      gap: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -120px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--sage-pale) 0%, transparent 70%);
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    .hero-text { position: relative; z-index: 2; }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.1s forwards;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 32px;
+      height: 1.5px;
+      background: var(--clay);
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--sage-deep);
+      margin-bottom: 10px;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.25s forwards;
+    }
+
+    h1 span {
+      display: block;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--clay);
+    }
+
+    .hero-title {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--text-mid);
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.4s forwards;
+    }
+
+    .hero-bio {
+      font-size: 1rem;
+      color: var(--text-mid);
+      max-width: 480px;
+      line-height: 1.8;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.55s forwards;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.7s forwards;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--sage);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      border-radius: 3px;
+      transition: background 0.25s, transform 0.2s;
+    }
+
+    .btn-primary:hover { background: var(--sage-deep); transform: translateY(-2px); }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 14px 32px;
+      border: 1.5px solid var(--sage);
+      color: var(--sage);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      border-radius: 3px;
+      transition: all 0.25s;
+    }
+
+    .btn-outline:hover {
+      background: var(--sage-pale);
+      transform: translateY(-2px);
+    }
+
+    /* ── HERO STATS ── */
+    .hero-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+      animation: fadeIn 1s 0.9s forwards;
+    }
+
+    .stat-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 28px 32px;
+      border-left: 4px solid var(--sage);
+      box-shadow: 0 4px 24px rgba(42, 34, 24, 0.07);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .stat-card:hover {
+      transform: translateX(6px);
+      box-shadow: 0 8px 32px rgba(42, 34, 24, 0.12);
+    }
+
+    .stat-card:nth-child(2) { border-left-color: var(--clay); margin-left: 24px; }
+    .stat-card:nth-child(3) { border-left-color: var(--sage-deep); margin-left: 48px; }
+
+    .stat-number {
+      font-family: 'Lora', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--sage-deep);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 0.82rem;
+      color: var(--text-soft);
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── SCROLL INDICATOR ── */
+    .scroll-hint {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      animation: pulse 2s infinite;
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, var(--sage), transparent);
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      padding: 100px 60px;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 16px;
+    }
+
+    .section-label::after {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: var(--clay);
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.9rem, 3vw, 2.6rem);
+      font-weight: 700;
+      color: var(--sage-deep);
+      line-height: 1.2;
+      margin-bottom: 40px;
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 80px;
+      align-items: start;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .about p {
+      color: var(--text-mid);
+      margin-bottom: 20px;
+      font-size: 1.02rem;
+    }
+
+    .about-facts {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .fact-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--linen);
+    }
+
+    .fact-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-soft);
+    }
+
+    .fact-value {
+      font-weight: 500;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .fact-value.tag {
+      background: var(--sage-pale);
+      color: var(--sage-deep);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+    }
+
+    /* ── EXPERIENCE ── */
+    .experience { background: var(--cream); }
+
+    .experience-inner { max-width: 900px; margin: 0 auto; }
+
+    .exp-card {
+      position: relative;
+      background: var(--white);
+      border-radius: 8px;
+      padding: 40px 44px;
+      box-shadow: 0 4px 32px rgba(42,34,24,0.07);
+      overflow: hidden;
+    }
+
+    .exp-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--sage), var(--clay));
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .exp-role {
+      font-family: 'Lora', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--sage-deep);
+    }
+
+    .exp-org {
+      font-size: 0.92rem;
+      color: var(--clay);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .exp-period {
+      background: var(--sage-pale);
+      color: var(--sage-deep);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .exp-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .exp-list li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      color: var(--text-mid);
+      font-size: 0.97rem;
+    }
+
+    .exp-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      min-width: 6px;
+      border-radius: 50%;
+      background: var(--clay);
+      margin-top: 9px;
+    }
+
+    /* ── EDUCATION ── */
+    .education { background: var(--linen); }
+
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .edu-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(42,34,24,0.06);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .edu-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(42,34,24,0.12);
+    }
+
+    .edu-year {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 12px;
+    }
+
+    .edu-qual {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--sage-deep);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .edu-institution {
+      font-size: 0.88rem;
+      color: var(--text-soft);
+      margin-bottom: 14px;
+    }
+
+    .edu-subjects {
+      font-size: 0.82rem;
+      color: var(--text-mid);
+      font-style: italic;
+      line-height: 1.6;
+      border-top: 1px solid var(--linen);
+      padding-top: 12px;
+    }
+
+    /* ── SKILLS ── */
+    .skills { background: var(--sage-deep); }
+
+    .skills .section-label { color: var(--sage-pale); }
+    .skills .section-label::after { background: var(--sage-pale); }
+    .skills h2 { color: var(--white); }
+
+    .skills-inner { max-width: 1000px; margin: 0 auto; }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .skill-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 22px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      transition: background 0.25s, border-color 0.25s;
+    }
+
+    .skill-item:hover {
+      background: rgba(255,255,255,0.13);
+      border-color: rgba(212, 228, 218, 0.3);
+    }
+
+    .skill-dot {
+      width: 8px;
+      height: 8px;
+      min-width: 8px;
+      border-radius: 50%;
+      background: var(--clay);
+    }
+
+    .skill-name {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.88);
+      font-weight: 400;
+    }
+
+    /* ── CERTIFICATIONS ── */
+    .certifications { background: var(--clay-pale); }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .cert-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 32px;
+      box-shadow: 0 2px 16px rgba(42,34,24,0.06);
+      border-top: 3px solid var(--clay);
+      transition: transform 0.25s;
+    }
+
+    .cert-card:hover { transform: translateY(-4px); }
+
+    .cert-year {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--clay);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .cert-title {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--sage-deep);
+      margin-bottom: 6px;
+      line-height: 1.35;
+    }
+
+    .cert-institution {
+      font-size: 0.84rem;
+      color: var(--text-soft);
+      margin-bottom: 16px;
+    }
+
+    .cert-modules {
+      font-size: 0.82rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+
+    .cert-modules strong {
+      display: block;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-soft);
+      margin-bottom: 6px;
+    }
+
+    /* ── CONTACT ── */
+    .contact {
+      background: var(--white);
+    }
+
+    .contact-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-intro p {
+      color: var(--text-mid);
+      margin-bottom: 28px;
+      font-size: 1rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+      color: var(--text-mid);
+      font-size: 0.95rem;
+    }
+
+    .contact-icon {
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
+      background: var(--sage-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-icon svg { width: 16px; height: 16px; stroke: var(--sage); fill: none; stroke-width: 2; }
+
+    .contact-item a {
+      color: var(--sage);
+      text-decoration: none;
+    }
+
+    .contact-item a:hover { text-decoration: underline; }
+
+    /* References */
+    .ref-cards { display: flex; flex-direction: column; gap: 20px; }
+
+    .ref-card {
+      background: var(--cream);
+      border-radius: 8px;
+      padding: 24px;
+      border-left: 3px solid var(--sage);
+    }
+
+    .ref-name {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      color: var(--sage-deep);
+      margin-bottom: 2px;
+    }
+
+    .ref-title {
+      font-size: 0.82rem;
+      color: var(--text-soft);
+      margin-bottom: 10px;
+    }
+
+    .ref-contact { font-size: 0.85rem; color: var(--text-mid); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--sage-deep);
+      color: rgba(255,255,255,0.55);
+      text-align: center;
+      padding: 36px 60px;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+    }
+
+    footer span { color: var(--sage-pale); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 18px 28px; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 110px 28px 60px; }
+      .hero::after { display: none; }
+      .hero-stats { flex-direction: row; flex-wrap: wrap; }
+      .stat-card { flex: 1; min-width: 140px; margin-left: 0 !important; }
+      section { padding: 70px 28px; }
+      .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+      .cert-grid { grid-template-columns: 1fr; }
+      .exp-card { padding: 28px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">Bongiwe Mkhasibe</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Social Auxiliary Worker &mdash; KwaZulu-Natal</div>
+      <h1>Bongiwe<span>Mkhasibe</span></h1>
+      <p class="hero-title">Elder Care &bull; Trauma Counselling &bull; Community Support</p>
+      <p class="hero-bio">
+        For over two decades I have worked directly with elderly residents and vulnerable community members, providing psychosocial support, coordinating welfare programmes, and helping people navigate difficult moments with dignity and care.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-primary">Get in Touch</a>
+        <a href="#experience" class="btn-outline">View Experience</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-number">22</div>
+        <div class="stat-label">Years of Service</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Counselling Certifications</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">BA</div>
+        <div class="stat-label">Psychology &amp; Sociology</div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="section-label">About</div>
+        <h2>Rooted in service.<br>Committed to people.</h2>
+        <p>
+          I spent 22 years at The Salvation Army's Ephraim Zulu Senior Citizen Centre in Mandeni, working as a Social Auxiliary Worker under the guidance of qualified social workers. My work centred on the daily wellbeing of elderly residents — running therapeutic programmes, facilitating group sessions, and providing individual support during difficult times.
+        </p>
+        <p>
+          My training in trauma counselling and family therapy deepened my ability to respond appropriately during crises, debrief individuals after traumatic incidents, and support families through complex situations. I also handled the administrative side of social work — compiling monthly reports, assisting residents with ID and grant applications, and maintaining accurate programme records.
+        </p>
+        <p>
+          I am available immediately and open to roles in elder care, social auxiliary work, community support, or related welfare services across KwaZulu-Natal.
+        </p>
+      </div>
+
+      <div class="about-facts reveal">
+        <div class="fact-row">
+          <span class="fact-label">Location</span>
+          <span class="fact-value">Mandeni, KwaZulu-Natal</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-label">Languages</span>
+          <span class="fact-value">IsiZulu, English, Sesotho</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-label">Driver's Licence</span>
+          <span class="fact-value">Code B</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-label">Availability</span>
+          <span class="fact-value tag">Immediately Available</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-label">Nationality</span>
+          <span class="fact-value">South African</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <div class="experience-inner">
+      <div class="reveal">
+        <div class="section-label">Experience</div>
+        <h2>22 years of dedicated service.</h2>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Social Auxiliary Worker</div>
+            <div class="exp-org">The Salvation Army &mdash; Ephraim Zulu Senior Citizen Centre, Mandeni</div>
+          </div>
+          <div class="exp-period">2001 &ndash; 2023</div>
+        </div>
+        <ul class="exp-list">
+          <li>Planned, coordinated and evaluated annual programmes for elderly residents, including group therapy sessions and community outings</li>
+          <li>Facilitated structured therapeutic programmes to support residents' emotional and psychological well-being</li>
+          <li>Assisted destitute residents with identity document applications and access to social grants and welfare services</li>
+          <li>Compiled monthly programme claims and maintained accurate administrative records</li>
+          <li>Wrote reports on resident progress, programme outcomes and critical incidents for management review</li>
+          <li>Liaised regularly with families, social workers and healthcare professionals to coordinate resident care</li>
+          <li>Provided immediate psychosocial support to residents in crisis or distress</li>
+          <li>Applied critical incident stress debriefing principles when residents experienced traumatic events</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="education" id="education">
+    <div class="reveal">
+      <div class="section-label">Education</div>
+      <h2>Academic foundation.</h2>
+    </div>
+    <div class="edu-grid reveal">
+      <div class="edu-card">
+        <div class="edu-year">1997 &ndash; 1999</div>
+        <div class="edu-qual">Bachelor of Arts</div>
+        <div class="edu-institution">University of the North</div>
+        <div class="edu-subjects">Major subjects: Psychology and Sociology</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-year">1993 &ndash; 1995</div>
+        <div class="edu-qual">National Senior Certificate (Matric)</div>
+        <div class="edu-institution">Mathunjwa High School</div>
+        <div class="edu-subjects">Mathematics &bull; Physical Science &bull; Biology &bull; IsiZulu &bull; English &bull; Afrikaans</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <div class="skills-inner">
+      <div class="reveal">
+        <div class="section-label">Skills</div>
+        <h2>What I bring to the role.</h2>
+      </div>
+      <div class="skills-grid reveal">
+        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Social auxiliary and elder care</span></div>
+        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Trauma counselling (certified)</span></div>
+        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Family therapy and counselling (certified)</span></div>
+        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Programme planning and coordination</span></div>
+        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Report writing and documentation</span></div>
+        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Administrative support and record keeping</span></div>
+        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Crisis response and psychosocial support</span></div>
+        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Critical incident stress debriefing</span></div>
+        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Welfare administration and grants</span></div>
+        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Microsoft Office</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="certifications" id="certifications">
+    <div class="reveal">
+      <div class="section-label">Certifications</div>
+      <h2>Specialised training.</h2>
+    </div>
+    <div class="cert-grid reveal">
+      <div class="cert-card">
+        <div class="cert-year">Intec College &bull; 2006</div>
+        <div class="cert-title">Introduction to Counselling People in Trauma</div>
+        <div class="cert-institution">Nationally recognised certificate</div>
+        <div class="cert-modules">
+          <strong>Modules covered</strong>
+          Issues in counselling trauma clients &bull; Critical incident stress debriefing &bull; Community disaster trauma &bull; Child abuse trauma &bull; Workplace trauma
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-year">Intec College &bull; 2009</div>
+        <div class="cert-title">Family Relationships and Counselling</div>
+        <div class="cert-institution">Nationally recognised certificate</div>
+        <div class="cert-modules">
+          <strong>Modules covered</strong>
+          Family therapy terminology &bull; Family life cycle &bull; Identifying long-standing family problems &bull; Sexual abuse and dysfunction
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-intro reveal">
+        <div class="section-label">Contact</div>
+        <h2>Let's connect.</h2>
+        <p>I am open to permanent, contract, or community-based roles in social auxiliary work, elder care, trauma support, or related welfare services in KwaZulu-Natal.</p>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.1 3.91 2 2 0 012 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <span>072 698 0510</span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <a href="mailto:bongiwemkhasibe73@gmail.com">bongiwemkhasibe73@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <span>Mandeni, KwaZulu-Natal</span>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="section-label">References</div>
+        <div class="ref-cards">
+          <div class="ref-card">
+            <div class="ref-name">Major X Sithole</div>
+            <div class="ref-title">Administrator</div>
+            <div class="ref-contact">
+              xoliswasithole@gmail.com<br>073 423 4530
+            </div>
+          </div>
+          <div class="ref-card">
+            <div class="ref-name">Brenda Novela</div>
+            <div class="ref-title">Social Worker</div>
+            <div class="ref-contact">
+              brendan82@gmail.com<br>067 588 4902
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>Bongiwe Mkhasibe</span> &mdash; Social Auxiliary Worker &mdash; KwaZulu-Natal, South Africa
+  </footer>
+
+  <script>
+    // Intersection observer for scroll reveals
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
