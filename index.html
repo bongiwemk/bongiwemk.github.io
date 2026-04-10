@@ -216,6 +216,18 @@
       transform: translateY(-2px);
     }
 
+    /* ── PROFILE PHOTO ── */
+    .profile-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--white);
+      box-shadow: 0 8px 32px rgba(42, 34, 24, 0.18);
+      display: block;
+      margin: 0 auto 8px;
+    }
+
     /* ── HERO STATS ── */
     .hero-stats {
       display: flex;
@@ -772,10 +784,12 @@
       <div class="hero-cta">
         <a href="#contact" class="btn-primary">Get in Touch</a>
         <a href="#experience" class="btn-outline">View Experience</a>
+        <a href="Assets/CV/final_cv.pdf" class="btn-outline" download>Download CV</a>
       </div>
     </div>
 
     <div class="hero-stats">
+      <img src="Assets/Pictures/image_e16076e.png" alt="Bongiwe Mkhasibe" class="profile-photo" />
       <div class="stat-card">
         <div class="stat-number">22</div>
         <div class="stat-label">Years of Service</div>
